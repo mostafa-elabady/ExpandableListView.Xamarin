@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ExpandableListView"
+             x:Class="ExpandableListView.MainPage">
+
+  <Grid VerticalOptions="Fill" HorizontalOptions="Fill">
+    <ListView x:Name="ItemsListView" SeparatorVisibility="None" SeparatorColor="Transparent" BackgroundColor= "Transparent" HorizontalOptions="Fill" VerticalOptions="Fill" HasUnevenRows="True">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell StyleId="no-selection">
+            <Grid VerticalOptions="FillAndExpand">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <local:CollapsibleControl  HorizontalOptions="Fill" VerticalOptions="Fill"
+                                         Title="{Binding Title}" Subtitle="{Binding SubTitle}" SubtitleTextColor="White" >
+                <local:CollapsibleControl.ExpandedView>
+                  <Grid HorizontalOptions="Fill" VerticalOptions="Fill" Padding="12" BackgroundColor="#e2e2e2">
+                    <Grid.RowDefinitions>
+                      <RowDefinition Height="Auto"/>
+                      <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Text="Details text " FontSize="Small" TextColor="{StaticResource DarkColor}"/>
+                    <Label Grid.Row="1" Text="Details text  2 " FontSize="Small" TextColor="{StaticResource DarkColor}"/>
+                  </Grid>
+                </local:CollapsibleControl.ExpandedView>
+              </local:CollapsibleControl>
+            </Grid>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </Grid>
+</ContentPage>

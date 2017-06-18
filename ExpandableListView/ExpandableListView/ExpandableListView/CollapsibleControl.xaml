@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpandableListView.CollapsibleControl">
+
+  <Grid HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="{StaticResource DarkColor}">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <BoxView Grid.Row="0" HorizontalOptions="Fill" HeightRequest="1" BackgroundColor="#f5f5f7" />
+
+    <Grid x:Name="HeaderGrid" Grid.Row="1" Padding="14,14,14,14" >
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="Auto" />
+      </Grid.ColumnDefinitions>
+
+      <Label x:Name="TitleLabel" TextColor="White" FontSize="Medium" HorizontalOptions="Fill" VerticalOptions="Fill"  Grid.Column="0" >
+      </Label>
+
+
+      <Label x:Name="SubtitleLabel" Grid.Column="1" TextColor="#f5f5f7"   IsVisible="False" Margin="0,0,16,0" HorizontalOptions="End" VerticalOptions="Fill" HorizontalTextAlignment="Start"  />
+
+      <Image x:Name="ExpandImage" Grid.Column="2" HorizontalOptions="End" BindingContext="{x:Reference Name=frame}" IsVisible="{Binding Path=IsVisible, Converter={StaticResource BooleanNegationConverter}}"  >
+        <Image.Source>
+          <OnPlatform x:TypeArguments="ImageSource" WinPhone="expand.png" Android="expand" iOS="expand.png"/>
+        </Image.Source>
+      </Image>
+
+      <Image x:Name="CollapseImage" Grid.Column="2" HorizontalOptions="End" BindingContext="{x:Reference Name=frame}" IsVisible="{Binding Path=IsVisible}"  >
+        <Image.Source>
+          <OnPlatform x:TypeArguments="ImageSource" WinPhone="collapse.png" Android="collapse" iOS="collapse.png"/>
+        </Image.Source>
+      </Image>
+    </Grid>
+
+    <Frame x:Name="frame" Grid.Row="2" Padding="0,0,0,0" HasShadow="False" BackgroundColor="Transparent"  IsVisible="False"  HorizontalOptions="Fill" VerticalOptions="Fill"/>
+  </Grid>
+</ContentView>

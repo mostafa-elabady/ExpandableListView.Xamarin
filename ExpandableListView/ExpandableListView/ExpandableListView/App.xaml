@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpandableListView.App"
+             
+            xmlns:converters="clr-namespace:ExpandableListView.Converters;assembly=ExpandableListView">
+  <Application.Resources>
+
+    <ResourceDictionary>
+      <converters:BooleanNegationConverter x:Key="BooleanNegationConverter" />
+
+      <Color x:Key="DarkColor">#2286c3"</Color>
+
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>
