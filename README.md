@@ -5,8 +5,8 @@ The idea is very simple, I have a ```ListView``` with ``` HasUnevenRows="True"``
 and the ViewCell is CollapsibleControl (A custom ContentView)
 
 ```XAML
-<local:CollapsibleControl  HorizontalOptions="Fill" VerticalOptions="Fill"
-                                         Title="{Binding Title}" Subtitle="{Binding SubTitle}" SubtitleTextColor="White" >
+<local:CollapsibleControl Title="{Binding Title}" Subtitle="{Binding SubTitle}" SubtitleTextColor="White"
+                          HorizontalOptions="Fill" VerticalOptions="Fill">
                 <local:CollapsibleControl.ExpandedView>
                   <Grid HorizontalOptions="Fill" VerticalOptions="Fill" Padding="12" BackgroundColor="#e2e2e2">
                     <Grid.RowDefinitions>
@@ -23,9 +23,13 @@ and the ViewCell is CollapsibleControl (A custom ContentView)
 The ```CollapsibleControl```  consists of title, subtitle, epand icon, collapse icon, and a frame for the ExpandedView.
 
 
+
+
 ###  Screen shots ###
 
 ![Alt text](/screenshots/android.gif?raw=true "Android")
+
+
 
 
 
