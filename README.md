@@ -5,5 +5,5 @@ Xamarin forms example for ExpandableListView without any renderers
 
 #Screen shots 
 
-![Alt text](/screenshots/android.gifraw=true "Android")
+![Alt text](/screenshots/android.gif?raw=true "Android")
 
