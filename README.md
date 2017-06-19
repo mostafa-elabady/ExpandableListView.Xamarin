@@ -4,7 +4,7 @@ Xamarin forms example for ExpandableListView without any renderers
 The idea is very simple, I have a ```ListView``` with ```HasUnevenRows="True"```
 and the ViewCell is CollapsibleControl (A custom ContentView)
 
-```
+```XAML
 <local:CollapsibleControl  HorizontalOptions="Fill" VerticalOptions="Fill"
                                          Title="{Binding Title}" Subtitle="{Binding SubTitle}" SubtitleTextColor="White" >
                 <local:CollapsibleControl.ExpandedView>
