@@ -9,7 +9,7 @@
     <ResourceDictionary>
       <converters:BooleanNegationConverter x:Key="BooleanNegationConverter" />
 
-      <Color x:Key="DarkColor">#2286c3"</Color>
+      <Color x:Key="DarkColor">#2286c3</Color>
 
     </ResourceDictionary>
   </Application.Resources>

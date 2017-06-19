@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:ExpandableListView"
              x:Class="ExpandableListView.MainPage">
 
-  <Grid VerticalOptions="Fill" HorizontalOptions="Fill">
+  <Grid VerticalOptions="Fill" HorizontalOptions="Fill" BackgroundColor="#e2e2e2">
     <ListView x:Name="ItemsListView" SeparatorVisibility="None" SeparatorColor="Transparent" BackgroundColor= "Transparent" HorizontalOptions="Fill" VerticalOptions="Fill" HasUnevenRows="True">
       <ListView.ItemTemplate>
         <DataTemplate>
