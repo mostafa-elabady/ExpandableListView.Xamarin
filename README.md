@@ -7,6 +7,7 @@ and the ViewCell is CollapsibleControl (A custom ContentView)
 ```XAML
 <local:CollapsibleControl Title="{Binding Title}" Subtitle="{Binding SubTitle}" SubtitleTextColor="White"
                           HorizontalOptions="Fill" VerticalOptions="Fill">
+                          
                 <local:CollapsibleControl.ExpandedView>
                   <Grid HorizontalOptions="Fill" VerticalOptions="Fill" Padding="12" BackgroundColor="#e2e2e2">
                     <Grid.RowDefinitions>
@@ -17,6 +18,7 @@ and the ViewCell is CollapsibleControl (A custom ContentView)
                     <Label Grid.Row="1" Text="Details text  2 " FontSize="Small" TextColor="{StaticResource DarkColor}"/>
                   </Grid>
                 </local:CollapsibleControl.ExpandedView>
+                
               </local:CollapsibleControl>
 ```              
 
