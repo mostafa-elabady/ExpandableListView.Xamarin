@@ -1,7 +1,7 @@
 # ExpandableListView.Xamarin
 Xamarin forms example for ExpandableListView without any renderers
 
-The idea is very simple, I have a ```ListView``` with ```XML HasUnevenRows="True"```
+The idea is very simple, I have a ```ListView``` with ```XAML HasUnevenRows="True"```
 and the ViewCell is CollapsibleControl (A custom ContentView)
 
 ```XAML
